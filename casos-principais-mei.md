@@ -37,26 +37,8 @@ Dados fiscais e comerciais.
 ## NFS-e
 ### UC-012 Emitir NFS-e
 **Fluxo Principal**
-```mermaid
-flowchart TD
-    
-    A((Início))
-    B[Selecionar Cliente]
-    C[Selecionar Serviço]
-    D[Validar Dados]
-    E[Gerar Nota]
-    F[Transmitir]
-    G[Receber Autorização]
-    H((Fim))
-     
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-    F --> G
-    G --> H
-```
+
+![](docs/imagens/emissor-fluxo-nfse.jpg)
 ### UC-013 Consultar NFS-e
 ### UC-014 Cancelar NFS-e
 ### UC-015 Reenviar NFS-e ao Cliente
@@ -64,26 +46,9 @@ flowchart TD
 ## NF-e
 ### UC-016 Emitir NF-e
 **Fluxo Principal**
-```mermaid
-flowchart TD
-    
-    A((Início))
-    B[Selecionar Cliente]
-    C[Selecionar Produtos]
-    D[Calcular Impostos]
-    E[Gerar XML]
-    F[Assinar XML]
-    G[Transmitir à SEFAZ]
-    H((NF-e Autorizada))
-     
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-    F --> G
-    G --> H
-```
+
+![](docs/imagens/emissor-fluxo-nfe.jpg)
+
 ### UC-017 Consultar NF-e
 ### UC-018 Cancelar NF-e
 ### UC-019 Carta de Correção
@@ -163,48 +128,8 @@ O sistema acompanha:
 - Evolução Mensal
 ---
 # Arquitetura Conceitual do Produto (V1)
-```mermaid
-mindmap
-  root((MEI))
-    Gestão da Empresa
-      UC-001 Cadastrar Empresa
-      UC-002 Atualizar Empresa
-    Clientes
-      UC-003 Cadastrar Cliente
-      UC-004 Consultar Cliente
-      UC-005 Atualizar Cliente
-    Produtos e Serviços
-      UC-006 Cadastrar Produto
-      UC-009 Cadastrar Serviço
-      Manutenção
-    Fiscal
-      UC-012 Emitir NFS-e
-      UC-016 Emitir NF-e
-      UC-021 Emitir NFC-e
-      Cancelar
-      Corrigir
-      Consultar
-    Compliance
-      UC-023 Monitorar Limite MEI
-      UC-024 Alertar Excesso
-      UC-025 Obrigações
-      UC-026 DASN-SIMEI
-    Contador
-      UC-028 Compartilhar Dados
-      UC-029 Exportar Fiscal
-      UC-030 Exportar XML
-    Comunicação
-      UC-032 Enviar Nota
-      UC-033 Compartilhar Link
-      UC-034 Segunda Via
-    Governança
-      UC-035 Login
-      UC-036 MFA
-      UC-039 Auditoria
-      UC-040 Armazenamento
-      UC-042 Recuperação
-```
 
+![](docs/imagens/arquitetura-conceitual-produto.jpg)
  
 ## Visão Geral
 
