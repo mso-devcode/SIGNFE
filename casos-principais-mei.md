@@ -100,12 +100,14 @@ O sistema acompanha:
 - Receita Mensal
 - Receita Acumulada
 - Percentual do Limite MEI
+
 ### UC-024 Alertar Excesso de Faturamento
-Notificações automáticas.
+ - Notificações automárcas
+
 ---
 ## Obrigações
 ### UC-025 Acompanhar Obrigações do MEI
-Exibir:
+**Exibir:**
 - DAS
 - DASN-SIMEI
 - Pendências
@@ -137,7 +139,7 @@ Exibir:
 ---
 # Auditoria e Governança
 ### UC-039 Registrar Operações
-Registrar:
+**Registrar:**
 - Emissões
 - Cancelamentos
 - Consultas
@@ -161,124 +163,63 @@ Registrar:
 - Evolução Mensal
 ---
 # Arquitetura Conceitual do Produto (V1)
-```text
-250
-MEI
-251
-│
-252
-├── Gestão da Empresa
-253
-│ ├── UC-001 Cadastrar Empresa
-254
-│ └── UC-002 Atualizar Empresa
-255
-│
-256
-├── Clientes
-257
-│ ├── UC-003 Cadastrar Cliente
-258
-│ ├── UC-004 Consultar Cliente
-259
-│ └── UC-005 Atualizar Cliente
-260
-│
-261
-├── Produtos e Serviços
-262
-│ ├── UC-006 Cadastrar Produto
-263
-│ ├── UC-009 Cadastrar Serviço
-264
-│ └── Manutenção
-265
-│
-266
-├── Fiscal
-267
-│ ├── UC-012 Emitir NFS-e
-268
-│ ├── UC-016 Emitir NF-e
-269
-│ ├── UC-021 Emitir NFC-e
-270
-│ ├── Cancelar
-271
-│ ├── Corrigir
-272
-│ └── Consultar
-273
-│
-274
-├── Compliance
-275
-│ ├── UC-023 Monitorar Limite MEI
-276
-│ ├── UC-024 Alertar Excesso
-277
-│ ├── UC-025 Obrigações
-278
-│ └── UC-026 DASN-SIMEI
-279
-│
-280
-├── Contador
-281
-│ ├── UC-028 Compartilhar Dados
-282
-│ ├── UC-029 Exportar Fiscal
-283
-│ └── UC-030 Exportar XML
-284
-│
-285
-├── Comunicação
-286
-│ ├── UC-032 Enviar Nota
-287
-│ ├── UC-033 Compartilhar Link
-288
-│ └── UC-034 Segunda Via
-289
-│
-290
-└── Governança
-291
-├── UC-035 Login
-292
-├── UC-036 MFA
-293
-├── UC-039 Auditoria
-294
-├── UC-040 Armazenamento
-295
-└── UC-042 Recuperação
-296
+```mermaid
+mindmap
+  root((MEI))
+    Gestão da Empresa
+      UC-001 Cadastrar Empresa
+      UC-002 Atualizar Empresa
+    Clientes
+      UC-003 Cadastrar Cliente
+      UC-004 Consultar Cliente
+      UC-005 Atualizar Cliente
+    Produtos e Serviços
+      UC-006 Cadastrar Produto
+      UC-009 Cadastrar Serviço
+      Manutenção
+    Fiscal
+      UC-012 Emitir NFS-e
+      UC-016 Emitir NF-e
+      UC-021 Emitir NFC-e
+      Cancelar
+      Corrigir
+      Consultar
+    Compliance
+      UC-023 Monitorar Limite MEI
+      UC-024 Alertar Excesso
+      UC-025 Obrigações
+      UC-026 DASN-SIMEI
+    Contador
+      UC-028 Compartilhar Dados
+      UC-029 Exportar Fiscal
+      UC-030 Exportar XML
+    Comunicação
+      UC-032 Enviar Nota
+      UC-033 Compartilhar Link
+      UC-034 Segunda Via
+    Governança
+      UC-035 Login
+      UC-036 MFA
+      UC-039 Auditoria
+      UC-040 Armazenamento
+      UC-042 Recuperação
 ```
-297
+
  
-298
 ## Visão Geral
-299
- 
-300
+
 A arquitetura foi concebida para cobrir integralmente o ciclo operacional do MEI:
-301
- 
-302
+
 - Operação do negócio
-303
+
 - Emissão fiscal
-304
+
 - Conformidade governamental
-305
+
 - Relacionamento com contador
-306
+
 - Segurança
-307
+
 - Governança
-308
- 
-309
+
 Além disso, mantém a solução preparada para futuras expansões funcionais.
